@@ -352,7 +352,7 @@ class gettext_reader {
   function select_string($n) {
     $string = $this->get_plural_forms();
     $string = str_replace('nplurals',"\$total",$string);
-    $string = str_replace("n",$n,$string);
+    $string = str_replace("n",(int)$n,$string);
     $string = str_replace('plural',"\$plural",$string);
 
     $total = 0;
